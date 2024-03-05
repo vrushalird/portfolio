@@ -115,7 +115,7 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + 400
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
@@ -275,6 +275,65 @@
       clickable: true
     }
   });
+
+ 
+      
+
+  // Function to display portfolio type
+  /*function displayPortfolioType() {
+    // Load the HTML content of the other file
+    loadHTML("../../index.html", function(htmlContent) {
+        // Extract class names from the loaded HTML content
+        var classNames = extractClassNames(htmlContent);
+
+        window.onload = function() {
+        // Redirect to portfolio.html after the page has loaded
+        window.location.href = "../../portfolio.html";
+      };
+        // Display class names or perform further processing
+        var portfolioTypeElement = document.getElementById("portfolio-info-display");
+        portfolioTypeElement.textContent = classNames.join(", ");
+    });
+  }
+  window.onload = displayPortfolioType;
+ 
+  function getPortfolioType() 
+  {
+    var elements = document.getElementsByClassName("portfolio-item");
+    var portfolioType = "Unknown"; // Default value if no matching class is found
+    
+    // Loop through the elements and get the approprate portfolio type
+    for (var i = 0; i < elements.length; i++) 
+    {
+      // Get the class names of the element
+      var classNames = elements[i].className.split(" ");
+      // Loop through the class names
+      for (var j = 0; j < classNames.length; j++)
+      {
+        switch(classNames[j])
+        {
+          case "filter-certificates": portfolioType = "Certificates";
+                                      break;
+          case "filter-awards": portfolioType = "Awards";
+                                break;
+          case "filter-projects": portfolioType = "Projects";
+                                  break;
+        }
+      }
+    }
+    return portfolioType;
+  }
+  
+
+
+  // Function to display portfolio-item
+  function displayPortfolioType() 
+  {
+    var portfolioTypeElement = document.getElementById("portfolio-info-display"); 
+    var portfolioType = getPortfolioType();
+    portfolioTypeElement.textContent = portfolioType + " ";
+  }*/
+  
 
   /**
    * Testimonials slider
