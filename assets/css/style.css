@@ -36,6 +36,36 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Loading
+--------------------------------------------------------------*/
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: cornsilk;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disappear {
+  animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -256,6 +286,12 @@ h1 a:hover {
 
 #hero .profile {
   margin-right: 20px; /* Adjust spacing between the elements */
+  z-index: 2;
+}
+
+#hero .profile:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s ease;
 }
 
 /*#hero .profile {
@@ -442,9 +478,9 @@ section {
 
 
 /*--------------------------------------------------------------
-# Facts
+# Stats
 --------------------------------------------------------------*/
-.facts {
+.stats {
   padding-bottom: 30px;
   padding-top: 30px;
   background: #f5fbfd;
@@ -454,18 +490,18 @@ section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.facts .count-box .card-top {
+.stats .count-box .card-top {
   /*background: #f5f8fd;*/
   /*height: 60%;*/
   padding: 30px 30px 0 30px;
 }
 
-.facts .count-box .card-caption {
+.stats .count-box .card-caption {
 
   padding: 15px 30px 30px 30px;
 }
 
-.facts .count-box {
+.stats .count-box {
   /*padding: 10px;*/
   width: 100%;
 }
@@ -498,7 +534,7 @@ section {
   transition: text-decoration 0.3s ease;
 }
 
-.facts .count-box i {
+.stats .count-box i {
   display: block;
   font-size: 44px;
   color: #009aae;
@@ -512,7 +548,7 @@ section {
 }
 
 
-.facts .count-box span {
+.stats .count-box span {
   font-size: 48px;
   line-height: 40px;
   display: block;
@@ -521,7 +557,7 @@ section {
   margin-left: 60px;
 }
 
-.facts .count-box p {
+.stats .count-box p {
   padding: 15px 0 0 0;
   /*margin: 40px 0 0 20px;*/
   font-family: "Raleway", sans-serif;
@@ -529,7 +565,7 @@ section {
   color: #122f57;
 }
 
-.facts .count-box a {
+.stats .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 20px;
@@ -539,7 +575,7 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.facts .count-box a:hover {
+.stats .count-box a:hover {
   color: #1f5297;
 }
 
@@ -547,10 +583,12 @@ section {
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  height: 80px;
+  width: 80%;
   display: block;
   background: none;
   border-radius: 0;
+  padding-top: 10px;
 }
 
 .skills .progress .skill {
@@ -560,12 +598,14 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+  font-size: 15px;
   color: #050d18;
 }
 
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
+  font-size: 12px;
 }
 
 .skills .progress-bar-wrap {
@@ -585,9 +625,21 @@ section {
   animation-delay: 0.5s;
 }
 
+.skills .row {
+  padding-bottom: 5px;
+}
 
+.skills .row .skill-img {
+  width: 80px;
+  height: 100%;
+  /*border-radius: 50%;*/
+  margin: 0 auto;
+  padding: 8px;
+}
 
-
+.skills .row .skill-img:hover {
+  transform: scale(1.5);
+}
 
 /*--------------------------------------------------------------
 # Resume

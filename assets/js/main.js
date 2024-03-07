@@ -42,6 +42,17 @@
   }
 
   /**
+   * Loading function 
+   */
+  var loader = document.querySelector(".loader-wrapper");
+  
+  window.addEventListener("load", vanish);
+
+  function vanish() {
+    loader.classList.add("disappear");
+  }
+
+  /**
    * Function to change background image
    *
   const changeBackgroundImage = () => {
