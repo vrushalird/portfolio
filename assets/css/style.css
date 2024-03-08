@@ -42,16 +42,17 @@ h6 {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: cornsilk;
+  background-color: #f5fbfd;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 }
 
 .disappear {
-  animation: vanish 1s forwards;
+  animation: vanish 0.3s forwards;
 }
 
 @keyframes vanish {
@@ -61,9 +62,49 @@ h6 {
   }
 }
 
+/*--------------------------------------------------------------
+# Dark-Light Mode Toggle
+--------------------------------------------------------------*/
 
+.nav-menu label {
+  width: 70px;
+  height: 30px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 30px;
+  /*box-shadow: inset 0 5px 15px rgba(0,0,0,0.4), inset 0 -5px -15px rgba(255, 255, 255, 0.4); not working*/
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.nav-menu label::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 22px;
+  transition: 0.3s;
+}
 
+.nav-menu #darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.nav-menu #darkmode-toggle:checked + .nav-menu label {
+  background: #242424;
+}
+
+.nav-menu #darkmode-toggle:checked + .nav-menu label::after {
+  left: 60px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -75,7 +116,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: #29C7DB;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -109,7 +150,7 @@ h6 {
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  background: #040b14;
+  background: #009AAE;
   overflow-y: auto;
   display: flex;
   justify-content: center; 
@@ -173,7 +214,7 @@ h1 a:hover {
 }
 
 .nav-menu ul li a:hover {
-  color: #009aae;
+  color: #b3c7c9;
 }
 
 .nav-menu a,
@@ -358,7 +399,7 @@ h1 a:hover {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #FCEC60;
 }
 
 @media (min-width: 1024px) {
@@ -403,7 +444,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   transition: color 0.3s ease-in-out;
-  color: #009aae/*#173b6c;   previous color*/
+  color: #29C7DB;
 }
 
 
@@ -417,15 +458,15 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #1f3333;
+  background: #FCEC60;
   bottom: 0;
   left: 0;
   transition: width 0.3s ease;
 }
 
 .section-title h2:hover::after {
-  width: 100px; /* Change width on hover */
-  background-color: #009aae;
+  width: 80px; /* Change width on hover */
+  background-color: #FCEC60;
 }
 
 
@@ -440,7 +481,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #149ddd;
+  color: #009AAE;
 }
 
 .about .content ul {
@@ -492,13 +533,13 @@ section {
 
 .stats .count-box .card-top {
   /*background: #f5f8fd;*/
-  /*height: 60%;*/
+  height: 50%;
   padding: 30px 30px 0 30px;
 }
 
 .stats .count-box .card-caption {
 
-  padding: 15px 30px 30px 30px;
+  padding: 5px 30px;
 }
 
 .stats .count-box {
@@ -518,7 +559,7 @@ section {
   transition: box-shadow 0.3s ease;
   background: #66cdda;
   color: white;
-  background: linear-gradient(to right, #149ddd, #009aae);
+  background: linear-gradient(to right, #29C7DB, #009aae);
   animation-delay: 0.5s;
 }
 
@@ -620,7 +661,7 @@ section {
   transition: 0.9s;
   background-color: #149ddd;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #149ddd, #009aae);
+  background: linear-gradient(to right, #29C7DB, #009aae);
   border-radius: 20px;
   animation-delay: 0.5s;
 }
@@ -649,7 +690,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #009AAE;
 }
 
 .resume .resume-item {
@@ -803,13 +844,13 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background: rgba(41, 198, 219, 0.65);
   transition: 0.3s;
   width: 50%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background: rgba(41, 198, 219, 0.95);
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
@@ -930,10 +971,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #149ddd;
+  background: #29C7DB;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #149ddd;
+  border: 1px solid #29C7DB;
 }
 
 .services .icon i {
@@ -947,7 +988,7 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: #29C7DB;
 }
 
 .services .title {
@@ -962,7 +1003,7 @@ section {
 }
 
 .services .title .title-text:hover {
-  color: #149ddd;
+  color: #29C7DB;
 }
 
 .services .description {
@@ -1080,7 +1121,7 @@ section {
 .contact .info .address i, 
 .contact .info .email i {
   font-size: 20px;
-  color: #149ddd;
+  color: #29C7DB;
   float: left;
   width: 44px;
   height: 44px;
@@ -1124,7 +1165,7 @@ section {
 }
 
 .contact .info .social-links a {
-  font-size: 25px;
+  font-size: 22px;
   display: inline-block;
   background: #212431;
   color: #fff;
@@ -1133,13 +1174,13 @@ section {
   margin-right: 4px;
   border-radius: 50%;
   transition: 0.3s;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   text-align: center;
 }
 
 .contact .info .social-links a:hover{
-  background: #149ddd;
+  background: #29C7DB;
   color: #fff;
   text-decoration: none;
 }
@@ -1172,7 +1213,7 @@ section {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
+  background: #29C7DB;
   color: #fff;
 }
 
