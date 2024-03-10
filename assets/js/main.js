@@ -85,8 +85,7 @@
 
   function updateStylesForDarkMode(isDarkMode) {
     const header = document.getElementById('header');
-    //const underline = document.querySelectorAll('.typed');
-    //const sections = document.querySelectorAll('section');
+    
     const about = document.getElementById('about');
     const stats = document.getElementById('stats');
     const skills = document.getElementById('skills');
@@ -96,10 +95,17 @@
     const contact = document.getElementById('contact');
     
     const textElements = document.querySelectorAll('.text-dark-mode');
-    console.log(textElements);
+    const h2Elements = document.querySelectorAll('.text-h2-dark-mode');
+
     const tagline = document.getElementById('tagline');
     
     const countBoxes = document.querySelectorAll('.count-box');
+
+    const skillsText = document.querySelectorAll('.skill');
+
+    const resumeItemElements = document.querySelectorAll('.resume-item');
+    //const skillsText = document.querySelectorAll('.skill');
+    const resumeTitles = document.querySelectorAll('.resume-title-h5');
 
     if (isDarkMode) {
       // Update styles for dark mode header
@@ -114,8 +120,14 @@
       services.style.backgroundColor = '#0C1313';
       contact.style.backgroundColor = '#151E1E';
 
+      // Update styles for all text elements
       textElements.forEach(function (element) {
         element.style.color = '#B1C0C2'; // Example text color
+      });
+
+      h2Elements.forEach(function (h2Element) {
+        h2Element.classList.remove('light-mode');
+        h2Element.classList.add('dark-mode');
       });
 
       tagline.style.color = '#000';
@@ -127,6 +139,27 @@
         box.style.setProperty('background-color', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
       });
 
+      skillsText.forEach(function (skillText) {
+        skillText.style.color = "#FFF";
+      });
+
+      resumeItemElements.forEach(function (resumeItemElement) {
+        const h4Element = resumeItemElement.querySelector('h4');
+        const h5Element = resumeItemElement.querySelector('h5');
+        if (h4Element) {
+          h4Element.style.color = '#FFF';
+        } else if (h5Element) {
+          //h5Element.style.color = '#272829'
+          //h5Element.setProperty('color', '#272829', 'important');
+          //h5Element.backgroundColor = '#185B64';
+        }
+      });
+
+      resumeTitles.forEach(function (resumeTitle) {
+        resumeTitle.style.color = '#000';
+        //resumeTitle.background = 'grey';
+        //resumeTitle.setProperty('background', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
+      });
 
     } else {
       // Reset styles for light mode
@@ -146,11 +179,30 @@
         element.style.color = ''; // Reset text color
       });
 
+      h2Elements.forEach(function (h2Element) {
+        h2Element.classList.remove('dark-mode');
+        h2Element.classList.add('light-mode');
+      });
+
       tagline.style.color = '';
 
       countBoxes.forEach(function(box) {
         box.classList.remove('dark-mode');
         box.classList.add('light-mode');
+      });
+
+      skillsText.forEach(function (skillText) {
+        skillText.style.color = "";
+      });
+
+      resumeItemElements.forEach(function (resumeItemElement) {
+        const h4Element = resumeItemElement.querySelector('h4');
+        const h5Element = resumeItemElement.querySelector('h5');
+        if (h4Element) {
+          h4Element.style.color = '';
+        } else if (h5Element) {
+          h5Element.style.color = ''
+        }
       });
   
     }

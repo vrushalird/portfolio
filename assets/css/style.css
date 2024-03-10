@@ -484,11 +484,6 @@ section {
   color: #29C7DB;
 }
 
-
-.section-title h2:hover {
-  color: #1f3333
-}
-
 .section-title h2::after {
   content: "";
   position: absolute;
@@ -501,14 +496,27 @@ section {
   transition: width 0.3s ease;
 }
 
-.section-title h2:hover::after {
+.section-title p {
+  margin-bottom: 0;
+}
+
+/* Hover over Section Title */
+.light-mode:hover, .section-title h2:hover {
+  color: #1f3333;
+}
+
+.light-mode h2:hover::after, .section-title h2:hover::after {
   width: 80px; /* Change width on hover */
   background-color: #FCEC60;
 }
 
+.dark-mode .section-title h2:hover {
+  color: #fff;
+}
 
-.section-title p {
-  margin-bottom: 0;
+.dark-mode .section-title h2:hover::after {
+  width: 80px; /* Change width on hover */
+  background-color: #FCEC60;
 }
 
 /*--------------------------------------------------------------
@@ -686,7 +694,7 @@ section {
 .dark-mode .count-box:hover i {
   opacity: 0;
   transition: opacity 0s ease;
-}*/
+}
 
 
 /*
