@@ -53,6 +53,112 @@
   }
 
   /**
+   * Function to toggle between dark and light mode
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+    const darkModeToggle = document.getElementById('darkmode-toggle');
+    const elementsToToggle = document.querySelectorAll('.dark-mode-toggle');
+
+    darkModeToggle.addEventListener('change', function () {
+      // Toggle dark mode class on body
+      document.body.classList.toggle('dark-mode');
+
+      // Toggle dark mode styles for specific elements
+      elementsToToggle.forEach(function (element) {
+        element.classList.toggle('dark-mode');
+      });
+
+      // Update other styles based on dark mode
+      updateStylesForDarkMode(document.body.classList.contains('dark-mode'));
+    });
+
+    // Check if dark mode is set in local storage
+    const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+      elementsToToggle.forEach(function (element) {
+        element.classList.add('dark-mode');
+      });
+      updateStylesForDarkMode(true);
+    }
+  });
+
+  function updateStylesForDarkMode(isDarkMode) {
+    const header = document.getElementById('header');
+    //const underline = document.querySelectorAll('.typed');
+    //const sections = document.querySelectorAll('section');
+    const about = document.getElementById('about');
+    const stats = document.getElementById('stats');
+    const skills = document.getElementById('skills');
+    const resume = document.getElementById('resume');
+    const portfolio = document.getElementById('portfolio');
+    const services = document.getElementById('services');
+    const contact = document.getElementById('contact');
+    
+    const textElements = document.querySelectorAll('.text-dark-mode');
+    console.log(textElements);
+    const tagline = document.getElementById('tagline');
+    
+    const countBoxes = document.querySelectorAll('.count-box');
+
+    if (isDarkMode) {
+      // Update styles for dark mode header
+      header.style.backgroundColor = '#0C1313'; // Example background color
+      
+      // Update styles for different sections
+      about.style.backgroundColor = '#151E1E';
+      stats.style.backgroundColor = '#0C1313'; 
+      skills.style.backgroundColor = '#151E1E';
+      resume.style.backgroundColor = '#0C1313';
+      portfolio.style.backgroundColor = '#151E1E';
+      services.style.backgroundColor = '#0C1313';
+      contact.style.backgroundColor = '#151E1E';
+
+      textElements.forEach(function (element) {
+        element.style.color = '#B1C0C2'; // Example text color
+      });
+
+      tagline.style.color = '#000';
+
+      countBoxes.forEach(function(box) {
+        box.classList.remove('light-mode');
+        box.classList.add('dark-mode');
+        // Set background color for count boxes with !important
+        box.style.setProperty('background-color', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
+      });
+
+
+    } else {
+      // Reset styles for light mode
+      header.style.backgroundColor = ''; // Reset background color
+      
+
+      // Reset styles for different sections
+      about.style.backgroundColor = '#FFF';
+      stats.style.backgroundColor = '#f5fbfd'; 
+      skills.style.backgroundColor = '#FFF';
+      resume.style.backgroundColor = '#f5fbfd';
+      portfolio.style.backgroundColor = '#FFF';
+      services.style.backgroundColor = '#f5fbfd';
+      contact.style.backgroundColor = '#FFF';
+
+      textElements.forEach(function (element) {
+        element.style.color = ''; // Reset text color
+      });
+
+      tagline.style.color = '';
+
+      countBoxes.forEach(function(box) {
+        box.classList.remove('dark-mode');
+        box.classList.add('light-mode');
+      });
+  
+    }
+  }
+
+
+
+  /**
    * Function to change background image
    *
   const changeBackgroundImage = () => {

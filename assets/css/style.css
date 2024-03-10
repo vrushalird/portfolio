@@ -66,44 +66,78 @@ h6 {
 # Dark-Light Mode Toggle
 --------------------------------------------------------------*/
 
+#darkmode-toggle {
+  left: 10px;
+}
+
 .nav-menu label {
-  width: 70px;
-  height: 30px;
+  width: 90px;
+  height: 40px;
   position: relative;
   display: block;
   background: #ebebeb;
   border-radius: 30px;
-  /*box-shadow: inset 0 5px 15px rgba(0,0,0,0.4), inset 0 -5px -15px rgba(255, 255, 255, 0.4); not working*/
+  box-shadow: inset 0 5px 15px rgba(0,0,0,0.4), inset 0 -5px -15px rgba(255, 255, 255, 0.4); /*not working*/
   cursor: pointer;
   transition: 0.3s;
 }
 
 .nav-menu label::after {
   content: "";
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   top: 4px;
   left: 4px;
   position: absolute;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
-  border-radius: 22px;
+  border-radius: 32px;
   transition: 0.3s;
 }
 
-.nav-menu #darkmode-toggle {
+input {
   width: 0;
   height: 0;
   visibility: hidden;
 }
 
-.nav-menu #darkmode-toggle:checked + .nav-menu label {
+input:checked + label {
   background: #242424;
 }
 
-.nav-menu #darkmode-toggle:checked + .nav-menu label::after {
-  left: 60px;
+input:checked + label::after {
+  left: 86px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label:active::after {
+  width: 45px;
+}
+
+label svg {
+  position: absolute !important;
+  width: 22px;
+  top: 10px;
+}
+
+label svg.sun {
+  left: 8px;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+label svg.moon {
+  right: 8px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+input:checked + label svg.sun {
+  fill: #7e7e7e;
+}
+
+input:checked + label svg.moon {
+  fill: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -153,7 +187,7 @@ h6 {
   background: #009AAE;
   overflow-y: auto;
   display: flex;
-  justify-content: center; 
+  justify-content: space-between; 
   align-items: center;
 }
 
@@ -191,6 +225,9 @@ h1 a:hover {
 /* Desktop Navigation */
 
 
+.nav-menu {
+  margin: auto;
+}
 .nav-menu * {
   margin: 0;
   padding: 0;
@@ -332,7 +369,7 @@ h1 a:hover {
 
 #hero .profile:hover{
   transform: scale(1.2);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s all;
 }
 
 /*#hero .profile {
@@ -538,41 +575,12 @@ section {
 }
 
 .stats .count-box .card-caption {
-
   padding: 5px 30px;
 }
 
 .stats .count-box {
   /*padding: 10px;*/
   width: 100%;
-}
-
-.count-box:hover .purecounter {
-  transform: scale(1.5);
-  padding-left: 0;
-  padding-top: 0;
-  transition: transform 0.3s ease;
-}
-
-.count-box:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease;
-  background: #66cdda;
-  color: white;
-  background: linear-gradient(to right, #29C7DB, #009aae);
-  animation-delay: 0.5s;
-}
-
-.count-box:hover,
-.count-box:hover i,
-.count-box:hover .purecounter {
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.count-box:hover p {
-  transform: scale(1.1);
-  transition: text-decoration 0.3s ease;
 }
 
 .stats .count-box i {
@@ -582,12 +590,6 @@ section {
   float: inline-start;
   line-height: 0;
 }
-
-.count-box:hover i {
-  opacity: 0;
-  transition: opacity 0s ease;
-}
-
 
 .stats .count-box span {
   font-size: 48px;
@@ -620,20 +622,100 @@ section {
   color: #1f5297;
 }
 
+/* Hover over CountBox */
+.light-mode:hover .purecounter, .count-box:hover .purecounter {
+  transform: scale(1.5);
+  padding-left: 0;
+  padding-top: 0;
+  transition: transform 0.3s ease;
+}
+
+.light-mode:hover, .count-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  background: #66cdda;
+  background: linear-gradient(to right, #29C7DB, #009aae) !important;
+  color: white;
+  animation-delay: 0.5s;
+}
+
+.light-mode:hover, .count-box:hover,
+.light-mode:hover i, .count-box:hover i,
+.light-mode:hover .purecounter, .count-box:hover .purecounter {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.light-mode:hover p, .count-box:hover p {
+  transform: scale(1.1);
+  transition: text-decoration 0.3s ease;
+}
+
+.light-mode:hover i, .count-box:hover i {
+  opacity: 0;
+  transition: opacity 0s ease;
+}
+
+/* Dark Mode Styles */
+.dark-mode .count-box:hover .purecounter {
+  transform: scale(1.5);
+  padding-left: 0;
+  padding-top: 0;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .count-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  background: linear-gradient(to right, #185B64, #0C1313) !important;
+  color: white;
+  animation-delay: 0.5s;
+}
+.dark-mode .count-box:hover,
+.dark-mode .count-box:hover i,
+.dark-mode .count-box:hover .purecounter {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .count-box:hover p {
+  transform: scale(1.1);
+  transition: text-decoration 0.3s ease;
+}
+
+.dark-mode .count-box:hover i {
+  opacity: 0;
+  transition: opacity 0s ease;
+}*/
+
+
+/*
+.dark-mode .count-box {
+  background: linear-gradient(90deg, #333, #666);
+  color: #fff; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .count-box:hover {
+  background: linear-gradient(90deg, #7f7f7f, #a1a1a1);
+  color: #fff; 
+}*/
+
+
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 80px;
-  width: 80%;
-  display: block;
+  width: 80% !important;
+  display: block !important;
   background: none;
   border-radius: 0;
   padding-top: 10px;
 }
 
 .skills .progress .skill {
-  padding: 0;
+  padding: 20px 0 0 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;
@@ -674,7 +756,7 @@ section {
   width: 80px;
   height: 100%;
   /*border-radius: 50%;*/
-  margin: 0 auto;
+  margin: 0 24px;
   padding: 8px;
 }
 

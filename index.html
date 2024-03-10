@@ -54,8 +54,75 @@
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header">
-    <div class="d-flex flex-row">
+  <header id="header" class="header dark-mode-toggle">
+    <div class="toggle-container">
+      <nav id="navbar" class="nav-menu toggle">
+        <ul>
+          <li>
+            <a>
+                <input type="checkbox" id="darkmode-toggle">
+                <label for="darkmode-toggle">
+                  <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
+                  
+                    <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001"
+                      height="16" />
+                    <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)" width="40.001"
+                      height="16" />
+                    <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16"
+                      height="39.999" />
+                  
+                    <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001"
+                      height="16" />
+                    <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16"
+                      height="39.999" />
+                    <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392
+                  				c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+                    <rect x="240" width="16" height="72" />
+                    <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999"
+                      height="16" />
+                    <rect y="240" width="72" height="16" />
+                  
+                    <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16"
+                      height="71.999" />
+                    <rect x="240" y="424" width="16" height="72" />
+                  
+                    <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999"
+                      height="16" />
+                    <rect x="424" y="240" width="72" height="16" />
+                    <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16"
+                      height="71.999" />
+                  </svg>
+                  <svg class="moon" fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <title>moon-stars</title>
+                      <path
+                        d="M29.201 24.121c-0.116-0.274-0.383-0.463-0.694-0.463-0.104 0-0.202 0.021-0.292 0.059l0.005-0.002c-1.272 0.542-2.752 0.857-4.306 0.857-6.213 0-11.25-5.037-11.25-11.25 0-4.66 2.833-8.658 6.871-10.366l0.074-0.028 0.211-0.089c0.267-0.118 0.45-0.381 0.45-0.687 0-0.375-0.276-0.686-0.635-0.74l-0.004-0.001c-0.653-0.103-1.407-0.161-2.174-0.161-8.145 0-14.748 6.603-14.748 14.748s6.603 14.748 14.748 14.748c4.748 0 8.973-2.244 11.67-5.73l0.025-0.034c0.097-0.125 0.155-0.285 0.155-0.458 0-0.127-0.031-0.246-0.086-0.351l0.002 0.004zM22.518 28.24c-1.497 0.637-3.238 1.007-5.066 1.007-7.317 0-13.249-5.932-13.249-13.249 0-7.074 5.543-12.853 12.523-13.23l0.034-0.001c-3.395 2.326-5.594 6.183-5.594 10.554 0 7.043 5.709 12.752 12.752 12.752 0.85 0 1.681-0.083 2.485-0.242l-0.081 0.013c-1.081 0.976-2.339 1.783-3.716 2.364l-0.087 0.033zM28.922 5.496h-3.498v-3.5c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 3.5h-3.5c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h3.5v3.499c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-3.499h3.498c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM20 10.25c-0.414 0-0.75 0.336-0.75 0.75v0 1.25h-1.25c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h1.25v1.25c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-1.25h1.25c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-1.25v-1.25c-0-0.414-0.336-0.75-0.75-0.75v0z">
+                      </path>
+                    </g>
+                  </svg></label>
+
+                <!--span class="slider round">
+                  <span class="emoji">🌙</span>
+                </span-->
+              
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="d-flex flex-row nav-menu">
       <!--div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Vrushali Daware</a></h1>
@@ -66,8 +133,9 @@
         </div>
       </div-->
       
-      <nav id="navbar" class="nav-menu navbar">
+      <nav id="navbar" class="navbar">
         <ul>
+          
           <li><a href="#hero" class="nav-link scrollto active"><!--i class="bx bx-home"></i--> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><!--i class="bx bx-user"></i--> <span>About Me</span></a></li>
           <li><a href="#skills" class="nav-link scrollto"><!--i class="bx bx-file-blank"></i--> <span>Skills</span></a></li>
@@ -75,17 +143,7 @@
           <li><a href="#portfolio" class="nav-link scrollto"><!--i class="bx bx-book-content"></i--> <span>Portfolio</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><!--i class="bx bx-server"></i--> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><!--i class="bx bx-envelope"></i--> <span>Contact</span></a></li>
-          <li>
-            <a>
-              
-                <input type="checkbox" id="darkmode-toggle">
-                <label for="darkmode-toggle"></label>
-                <!--span class="slider round">
-                  <span class="emoji">🌙</span>
-                </span-->
-              
-            </a>
-          </li>
+          
         </ul>
       </nav><!-- .nav-menu --> 
       
@@ -123,9 +181,9 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title text-dark-mode">
           <h2><!--img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"--> About Me</h2>
-          <p class="fst-italic tagline">
+          <p id="tagline" class="fst-italic tagline">
             I build software robots that help you automate your day-to-day manual work, thereby ensuring you focus on what truly matters.
           </p><br>
           <!--p>Hi there!</p><br-->
@@ -152,7 +210,7 @@
             <!--img src="assets/img/profile-img.jpg" alt="" class="img-fluid"-->
           </div>
           <!--About Me Description Section-->
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <div class="col-lg-8 pt-4 pt-lg-0 content text-dark-mode" data-aos="fade-left">
             <h3>Summary</h3>
             <!--p class="fst-italic"-->
             
@@ -193,7 +251,7 @@
 
     <!-- ======= Stats Section ======= -->
     <section id="stats" class="stats">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Stats</h2>
@@ -203,49 +261,49 @@
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
+            <div class="count-box light-mode">
               <div class="card-top">
                 <i class="bi bi-emoji-smile"></i>
-                <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter text-dark-mode"></span>
               </div>
               <div class="card-caption">
-                <p><strong>Happy Clients</strong> across organization</p>
+                <p class="text-dark-mode"><strong>Happy Clients</strong> across organization</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
+            <div class="count-box light-mode">
               <div class="card-top">
                 <i class="bi bi-robot"></i>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter text-dark-mode"></span>
               </div>
               <div class="card-caption">
-                <p><strong>Bots</strong> developed</span></p>
+                <p class="text-dark-mode"><strong>Bots</strong> developed</span></p>
             </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
+            <div class="count-box light-mode">
               <div class="card-top">
                 <i class="bi bi-building-check"></i>
-                <span data-purecounter-start="0" data-purecounter-end="28" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="28" data-purecounter-duration="1" class="purecounter text-dark-mode"></span>
               </div>
               <div class="card-caption">
-                <p><strong>Projects</strong> completed</p>
+                <p class="text-dark-mode"><strong>Projects</strong> completed</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
+            <div class="count-box light-mode">
               <div class="card-top">
                 <i class="bi bi-person-video"></i>
-                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter text-dark-mode"></span>
               </div>
               <div class="card-caption">
-                <p><strong>Business Demonstrations</strong> conducted</p>
+                <p class="text-dark-mode"><strong>Business Demonstrations</strong> conducted</p>
               </div>
             </div>
           </div>
@@ -257,19 +315,19 @@
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Skills</h2>
           <p>Here is a comprehensive list of my skills, ranging from proficient automation tools to advanced programming languages to database management and more.</p>
         </div>
-
+        
         <div class="row skills-content">
 
           <div class="col-lg-6" data-aos="fade-up">
             <div class="row">
-              <img src="assets/img/skills/Blue-Prism.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="Blue Prism: Advanced proficiency level (version 6.10, 7)">
+              <img src="assets/img/skills/Blue-Prism.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="Blue Prism: Advanced proficiency level (version 6.10, 7)" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">Blue Prism <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -278,8 +336,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/Automation-Anywhere.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="Automation Anywhere: Beginner proficiency level (version 11.0)">
+              <img src="assets/img/skills/Automation-Anywhere.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="Automation Anywhere: Beginner proficiency level (version 11.0)" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">Automation Anywhere <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
@@ -288,8 +346,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/Powershell.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="Powershell: Basic proficiency level">
+              <img src="assets/img/skills/Powershell.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="Powershell: Basic proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">Powershell <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -298,8 +356,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/VBA.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="VBA: Intermediate proficiency level">
+              <img src="assets/img/skills/VBA.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="VBA: Intermediate proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">VBA <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
@@ -308,8 +366,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/Csharp.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="C#: Intermediate pproficiency level">
+              <img src="assets/img/skills/Csharp.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="C#: Intermediate pproficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">C# <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -322,8 +380,8 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row">
-              <img src="assets/img/skills/SQL.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="SQL: Advance proficiency level">
+              <img src="assets/img/skills/SQL.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="SQL: Advance proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill" >SQL <i class="val">60%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
@@ -332,8 +390,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/HTML.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="HTML: Basic pproficiency level">
+              <img src="assets/img/skills/HTML.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="HTML: Basic pproficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill">HTML <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -342,8 +400,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/CSS.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="CSS: Basic proficiency level">
+              <img src="assets/img/skills/CSS.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="CSS: Basic proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill" >CSS <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -352,8 +410,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/JavaScript.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="Javascript: Basic proficiency level">
+              <img src="assets/img/skills/JavaScript.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="Javascript: Basic proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill" >Javascript <i class="val">60%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
@@ -362,8 +420,8 @@
             </div>
 
             <div class="row">
-              <img src="assets/img/skills/GitHub.png" class="skill-img" alt="work from home GIF">
-              <div class="progress" data-toggle="tooltip" title="Git: Basic proficiency level">
+              <img src="assets/img/skills/GitHub.png" class="col-lg-4 skill-img" alt="work from home GIF">
+              <div class="col-lg-8 progress" data-toggle="tooltip" title="Git: Basic proficiency level" style="width:80%; display:block; height:80px; background: none;">
                 <span class="skill" >Git <i class="val">65%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
@@ -380,7 +438,7 @@
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume section-bg">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Resume</h2>
@@ -469,7 +527,7 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Portfolio</h2>
@@ -595,7 +653,7 @@
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Services</h2>
@@ -650,7 +708,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container text-dark-mode">
 
         <div class="section-title">
           <h2>Contact</h2>
