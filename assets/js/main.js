@@ -107,6 +107,8 @@
     //const skillsText = document.querySelectorAll('.skill');
     const resumeTitles = document.querySelectorAll('.resume-title-h5');
 
+    const servicesTitleElements = document.querySelectorAll('.title-text');
+
     if (isDarkMode) {
       // Update styles for dark mode header
       header.style.backgroundColor = '#0C1313'; // Example background color
@@ -160,6 +162,16 @@
         //resumeTitle.background = 'grey';
         //resumeTitle.setProperty('background', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
       });
+      /*
+      servicesTitleElements.forEach(function (servicesTitle) {
+        servicesTitle.style.color = '#FFF';
+      });
+      */
+      servicesTitleElements.forEach(function (servicesTitle) {
+        servicesTitle.classList.remove('light-mode');
+        servicesTitle.classList.add('dark-mode');
+      });
+
 
     } else {
       // Reset styles for light mode

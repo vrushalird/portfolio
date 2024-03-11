@@ -1102,6 +1102,20 @@ section {
   font-size: 14px;
 }
 
+/* Dark-Light mode styles for Services Titles */
+.light-mode .title .title-text:hover, .services .title .title-text:hover {
+  color: #29C7DB;
+}
+
+.dark-mode .services .title .title-text:hover {
+  color: #29C7DB;
+}
+
+.dark-mode .services .title .title-text {
+  color: #FFF;
+}
+
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
