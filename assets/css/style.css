@@ -330,21 +330,39 @@ h1 a:hover {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg5.jpg") top center;
+  position: relative;
+  /*background: url("../img/hero-bg5.jpg") top center;*/
   background-size: cover;
   background-position: top center;
   transition: background-image 0.2s ease-in-out;
 }
 
-#hero .profile .social-links {
-  margin-top: 10px;
-  text-align: center;
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-#hero .profile .social-links a {
+#hero .profile, .hero-container {
+  flex: 1;
+  z-index: 2;
+}
+
+#hero .hero-container .social-links {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+#hero .hero-container .social-links a {
   display: inline-block;
-  background: #212431;
-  color: #fff;
+  background: #FCEC60;
+  color: #5A584E;
   line-height: 1;
   padding: 8px;
   margin-right: 4px;
@@ -352,14 +370,10 @@ h1 a:hover {
   transition: 0.3s;
 }
 
-#hero .profile .social-links a:hover{
-  background: #149ddd;
+#hero .hero-container .social-links a:hover{
+  background: #009AAE;
   color: #fff;
   text-decoration: none;
-}
-
-#hero .profile, .hero-container {
-  flex: 1; /* Equal width for both elements */
 }
 
 #hero .profile {
@@ -367,25 +381,19 @@ h1 a:hover {
   z-index: 2;
 }
 
-#hero .profile:hover{
+#hero .profile img:hover{
   transform: scale(1.2);
-  transition: transform 0.3s all;
+  transition: transform 0.5s ease-in-out;
 }
 
-/*#hero .profile {
-  position: relative;
-  /*top: 50px;  Adjust as needed to separate from the nav menu 
-  left: 15px;
-  z-index: 2;  Ensure profile stays above other content 
-  padding-left: 50px;
-}*/
 
 #hero .profile img {
   margin: 15px auto;
   display: block;
   width: 400px;
   padding: 10px;
-  /*border: 8px solid #2c2f3f;*/
+  transition: transform 0.5s ease-in-out;
+  /*border: 8px solid #FCEC60;*/
 }
 
 #hero .profile h1 {
@@ -397,17 +405,6 @@ h1 a:hover {
   -moz-text-align-last: center;
   text-align-last: center;
   font-family: "Poppins", sans-serif;
-}
-
-#hero:before {
-  content: "";
-  background: rgba(5, 13, 24, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
 }
 
 #hero .hero-container {
@@ -871,7 +868,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background: #fff;
+  background: #FCEC60;
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -1215,6 +1212,37 @@ section {
   padding-bottom: 130px;
 }
 
+#contact {
+  display: flex;
+  background: url("../img/contact.jpg") top center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: top center;
+}
+
+#contact:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.7);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#contact .container {
+  flex: 1;
+  z-index: 2;
+}
+
+.contact .container .contact-heading {
+  color: #fff;
+}
+
 .contact .info {
   padding: 30px;
   background: #fff;
@@ -1271,8 +1299,8 @@ section {
 .contact .info .social-links a {
   font-size: 22px;
   display: inline-block;
-  background: #212431;
-  color: #fff;
+  background: #FCEC60;
+  color: #5A584E;
   line-height: 1;
   padding: 9px;
   margin-right: 4px;
@@ -1284,7 +1312,7 @@ section {
 }
 
 .contact .info .social-links a:hover{
-  background: #29C7DB;
+  background: #009AAE;
   color: #fff;
   text-decoration: none;
 }

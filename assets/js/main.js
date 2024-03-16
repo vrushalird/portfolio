@@ -223,15 +223,21 @@
 
 
   /**
-   * Function to change background image
-   *
+   * Function to change background image of Hero section
+   */
   const changeBackgroundImage = () => {
     var backgroundImages = [
-      "../img/hero-bg1.jpg",
-      "../img/hero-bg2.jpg",
-      "../img/hero-bg3.jpg",
-      "../img/hero-bg4.jpg",
-      "../img/hero-bg5.jpg",
+      "assets/img/background/hero-bg1.jpg",
+      "assets/img/background/hero-bg2.jpg",
+      "assets/img/background/hero-bg3.jpg",
+      "assets/img/background/hero-bg4.jpg",
+      "assets/img/background/hero-bg5.jpg",
+      "assets/img/background/hero-bg6.jpg",
+      "assets/img/background/hero-bg7.jpg",
+      "assets/img/background/hero-bg8.jpg",
+      "assets/img/background/hero-bg9.jpg",
+      "assets/img/background/hero-bg10.jpg",
+      "assets/img/background/hero-bg11.jpg"
     ];
     var randomIndex = Math.floor(Math.random() * backgroundImages.length);
     var selectedImage = backgroundImages[randomIndex];
@@ -240,7 +246,7 @@
 
   // Call changeBackgroundImage initially and then every 5 seconds
   changeBackgroundImage();
-  setInterval(changeBackgroundImage, 5000);*/
+  setInterval(changeBackgroundImage, 5000);
 
   /**
    * Function to calculate number of years for Work Experience
