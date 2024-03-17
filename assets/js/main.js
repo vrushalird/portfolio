@@ -104,119 +104,153 @@
     const skillsText = document.querySelectorAll('.skill');
 
     const resumeItemElements = document.querySelectorAll('.resume-item');
-    //const skillsText = document.querySelectorAll('.skill');
     const resumeTitles = document.querySelectorAll('.resume-title-h5');
 
     const servicesTitleElements = document.querySelectorAll('.title-text');
+
+    const portfolioSections = document.getElementById('portfolioContainer');
+    const portfolioSectionBg = document.querySelectorAll('.section-bg');
 
     if (isDarkMode) {
       // Update styles for dark mode header
       header.style.backgroundColor = '#0C1313'; // Example background color
       
-      // Update styles for different sections
-      about.style.backgroundColor = '#151E1E';
-      stats.style.backgroundColor = '#0C1313'; 
-      skills.style.backgroundColor = '#151E1E';
-      resume.style.backgroundColor = '#0C1313';
-      portfolio.style.backgroundColor = '#151E1E';
-      services.style.backgroundColor = '#0C1313';
-      contact.style.backgroundColor = '#151E1E';
+      //check which page is open
+      if(about == null) {
+        //Portfolio page elements
+        portfolioSections.style.backgroundColor = '#151E1E';
+        portfolioSectionBg.forEach(function (portfolioAltSection) {
+          portfolioAltSection.style.backgroundColor = '#0C1313';
+        });
 
-      // Update styles for all text elements
-      textElements.forEach(function (element) {
-        element.style.color = '#B1C0C2'; // Example text color
-      });
+        // Update styles for all text elements
+        textElements.forEach(function (element) {
+          element.style.color = '#B1C0C2'; // Example text color
+        });
+      } 
+      // Main Index page
+      else {
+        // Update styles for different sections
+        about.style.backgroundColor = '#151E1E';
+        stats.style.backgroundColor = '#0C1313'; 
+        skills.style.backgroundColor = '#151E1E';
+        resume.style.backgroundColor = '#0C1313';
+        portfolio.style.backgroundColor = '#151E1E';
+        services.style.backgroundColor = '#0C1313';
+        contact.style.backgroundColor = '#151E1E';
 
-      h2Elements.forEach(function (h2Element) {
-        h2Element.classList.remove('light-mode');
-        h2Element.classList.add('dark-mode');
-      });
+        // Update styles for all text elements
+        textElements.forEach(function (element) {
+          element.style.color = '#B1C0C2'; // Example text color
+        });
 
-      tagline.style.color = '#000';
+        h2Elements.forEach(function (h2Element) {
+          h2Element.classList.remove('light-mode');
+          h2Element.classList.add('dark-mode');
+        });
 
-      countBoxes.forEach(function(box) {
-        box.classList.remove('light-mode');
-        box.classList.add('dark-mode');
-        // Set background color for count boxes with !important
-        box.style.setProperty('background-color', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
-      });
+        tagline.style.color = '#000';
 
-      skillsText.forEach(function (skillText) {
-        skillText.style.color = "#FFF";
-      });
+        countBoxes.forEach(function(box) {
+          box.classList.remove('light-mode');
+          box.classList.add('dark-mode');
+          // Set background color for count boxes with !important
+          box.style.setProperty('background-color', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
+        });
 
-      resumeItemElements.forEach(function (resumeItemElement) {
-        const h4Element = resumeItemElement.querySelector('h4');
-        const h5Element = resumeItemElement.querySelector('h5');
-        if (h4Element) {
-          h4Element.style.color = '#FFF';
-        } else if (h5Element) {
-          //h5Element.style.color = '#272829'
-          //h5Element.setProperty('color', '#272829', 'important');
-          //h5Element.backgroundColor = '#185B64';
-        }
-      });
+        skillsText.forEach(function (skillText) {
+          skillText.style.color = "#FFF";
+        });
 
-      resumeTitles.forEach(function (resumeTitle) {
-        resumeTitle.style.color = '#000';
-        //resumeTitle.background = 'grey';
-        //resumeTitle.setProperty('background', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
-      });
-      /*
-      servicesTitleElements.forEach(function (servicesTitle) {
-        servicesTitle.style.color = '#FFF';
-      });
-      */
-      servicesTitleElements.forEach(function (servicesTitle) {
-        servicesTitle.classList.remove('light-mode');
-        servicesTitle.classList.add('dark-mode');
-      });
+        resumeItemElements.forEach(function (resumeItemElement) {
+          const h4Element = resumeItemElement.querySelector('h4');
+          const h5Element = resumeItemElement.querySelector('h5');
+          if (h4Element) {
+            h4Element.style.color = '#FFF';
+          } else if (h5Element) {
+            //h5Element.style.color = '#272829'
+            //h5Element.setProperty('color', '#272829', 'important');
+            //h5Element.backgroundColor = '#185B64';
+          }
+        });
 
+        resumeTitles.forEach(function (resumeTitle) {
+          resumeTitle.style.color = '#000';
+          //resumeTitle.background = 'grey';
+          //resumeTitle.setProperty('background', 'linear-gradient(to right, #185B64, #0C1313)', 'important');
+        });
+        /*
+        servicesTitleElements.forEach(function (servicesTitle) {
+          servicesTitle.style.color = '#FFF';
+        });
+        */
+        servicesTitleElements.forEach(function (servicesTitle) {
+          servicesTitle.classList.remove('light-mode');
+          servicesTitle.classList.add('dark-mode');
+        });
+
+      }
+      
+      
 
     } else {
       // Reset styles for light mode
       header.style.backgroundColor = ''; // Reset background color
       
+      //check which page is open
+      if(about == null) {
+        //Portfolio page elements
+        portfolioSections.style.backgroundColor = '';
+        portfolioSectionBg.forEach(function (portfolioAltSection) {
+          portfolioAltSection.style.backgroundColor = '';
+        });
 
-      // Reset styles for different sections
-      about.style.backgroundColor = '#FFF';
-      stats.style.backgroundColor = '#f5fbfd'; 
-      skills.style.backgroundColor = '#FFF';
-      resume.style.backgroundColor = '#f5fbfd';
-      portfolio.style.backgroundColor = '#FFF';
-      services.style.backgroundColor = '#f5fbfd';
-      contact.style.backgroundColor = '#FFF';
+        // Update styles for all text elements
+        textElements.forEach(function (element) {
+          element.style.color = ''; // Example text color
+        });
+      } 
+      // Main Index page
+      else {
+        // Reset styles for different sections
+        about.style.backgroundColor = '#FFF';
+        stats.style.backgroundColor = '#f5fbfd'; 
+        skills.style.backgroundColor = '#FFF';
+        resume.style.backgroundColor = '#f5fbfd';
+        portfolio.style.backgroundColor = '#FFF';
+        services.style.backgroundColor = '#f5fbfd';
+        contact.style.backgroundColor = '#FFF';
 
-      textElements.forEach(function (element) {
-        element.style.color = ''; // Reset text color
-      });
+        textElements.forEach(function (element) {
+          element.style.color = ''; // Reset text color
+        });
 
-      h2Elements.forEach(function (h2Element) {
-        h2Element.classList.remove('dark-mode');
-        h2Element.classList.add('light-mode');
-      });
+        h2Elements.forEach(function (h2Element) {
+          h2Element.classList.remove('dark-mode');
+          h2Element.classList.add('light-mode');
+        });
 
-      tagline.style.color = '';
+        tagline.style.color = '';
 
-      countBoxes.forEach(function(box) {
-        box.classList.remove('dark-mode');
-        box.classList.add('light-mode');
-      });
+        countBoxes.forEach(function(box) {
+          box.classList.remove('dark-mode');
+          box.classList.add('light-mode');
+        });
 
-      skillsText.forEach(function (skillText) {
-        skillText.style.color = "";
-      });
+        skillsText.forEach(function (skillText) {
+          skillText.style.color = "";
+        });
 
-      resumeItemElements.forEach(function (resumeItemElement) {
-        const h4Element = resumeItemElement.querySelector('h4');
-        const h5Element = resumeItemElement.querySelector('h5');
-        if (h4Element) {
-          h4Element.style.color = '';
-        } else if (h5Element) {
-          h5Element.style.color = ''
-        }
-      });
-  
+        resumeItemElements.forEach(function (resumeItemElement) {
+          const h4Element = resumeItemElement.querySelector('h4');
+          const h5Element = resumeItemElement.querySelector('h5');
+          if (h4Element) {
+            h4Element.style.color = '';
+          } else if (h5Element) {
+            h5Element.style.color = ''
+          }
+        });
+      }
     }
   }
 

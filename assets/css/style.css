@@ -132,6 +132,12 @@ label svg.moon {
   transition: 0.3s;
 }
 
+label svg.moon {
+  right: 8px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
 input:checked + label svg.sun {
   fill: #7e7e7e;
 }
@@ -716,7 +722,6 @@ section {
   display: block !important;
   background: none;
   border-radius: 0;
-  padding-top: 10px;
 }
 
 .skills .progress .skill {
@@ -854,6 +859,7 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+  background-color: #f5fbfd;
 }
 
 /*--------------------------------------------------------------
@@ -1460,7 +1466,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   /*padding: 20px 0;*/
-  background: #f9f9f9;
+  background: #FCEC60;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
   margin-top: 24px;

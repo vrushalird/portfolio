@@ -36,9 +36,71 @@
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header">
-    <div class="d-flex flex-row">
-      <nav id="navbar" class="nav-menu navbar">
+  <header id="header" class="header dark-mode-toggle">
+    <div class="toggle-container">
+      <nav id="navbar" class="nav-menu toggle">
+        <ul>
+          <li>
+            <a>
+                <input type="checkbox" id="darkmode-toggle">
+                <label for="darkmode-toggle">
+                  <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                    y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
+                  
+                    <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001"
+                      height="16" />
+                    <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)" width="40.001"
+                      height="16" />
+                    <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16"
+                      height="39.999" />
+                  
+                    <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001"
+                      height="16" />
+                  
+                    <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001"
+                      height="16" />
+                    <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16"
+                      height="39.999" />
+                    <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392
+                  				c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+                    <rect x="240" width="16" height="72" />
+                    <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999"
+                      height="16" />
+                    <rect y="240" width="72" height="16" />
+                  
+                    <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16"
+                      height="71.999" />
+                    <rect x="240" y="424" width="16" height="72" />
+                  
+                    <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999"
+                      height="16" />
+                    <rect x="424" y="240" width="72" height="16" />
+                    <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16"
+                      height="71.999" />
+                  </svg>
+                  <svg class="moon" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> 
+                      <!--g id="icomoon-ignore"> </g--> 
+                      <path 
+                        d="M9.882 5.052c-0.847 1.717-1.295 3.614-1.295 5.564 0 6.977 5.676 12.653 12.653 12.653 2.052 0 4.035-0.489 5.812-1.412-2.15 3.869-6.248 6.37-10.862 6.37-6.866 0-12.451-5.585-12.451-12.451 0-4.491 2.409-8.533 6.143-10.724zM12.79 2.707c-5.817 1.509-10.118 6.78-10.118 13.069 0 7.465 6.053 13.517 13.518 13.517 6.387 0 11.726-4.435 13.139-10.389-2.087 2.039-4.939 3.298-8.088 3.298-6.399 0-11.587-5.188-11.587-11.587 0-3.061 1.196-5.838 3.137-7.909v0z"> 
+                      </path> 
+                    </g>
+                  </svg>
+                </label>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="d-flex flex-row nav-menu">
+      <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html#hero" class="nav-link scrollto active"> <span>Home</span></a></li>
           <li><a href="index.html#about" class="nav-link scrollto"> <span>About Me</span></a></li>
@@ -72,8 +134,8 @@
     <!-- ======= Certificates Sections ======= -->
     <!-- ======= Portfolio Details Section 1 - Certificate 1 ======= -->
     <div id="portfolioContainer">
-      <section id="portfolio-details-1" class="portfolio-details">
-        <div class="container">
+      <section id="certificates" class="portfolio-details text-dark-mode">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -116,8 +178,8 @@
       </section><!-- End Portfolio Details Section 1  -->
   
       <!-- ======= Portfolio Details Section 2 - Certificate 2 ======= -->
-      <section id="portfolio-details-2" class="portfolio-details section-bg">
-        <div class="container">
+      <section id="certificates" class="portfolio-details section-bg">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -158,8 +220,8 @@
       </section><!-- End Portfolio Details Section 2 -->
   
       <!-- ======= Portfolio Details Section 3 - Certificate 3 ======= -->
-      <section id="portfolio-details-3" class="portfolio-details">
-        <div class="container">
+      <section id="certificates" class="portfolio-details">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -201,8 +263,8 @@
       </section><!-- End Portfolio Details Section 3 -->
 
       <!-- ======= Portfolio Details Section 4 - Certificate 4 ======= -->
-      <section id="portfolio-details-4" class="portfolio-details section-bg">
-        <div class="container">
+      <section id="certificates" class="portfolio-details section-bg">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -248,7 +310,7 @@
       <!-- ======= Awards Sections ======= -->
       <!-- ======= Portfolio Details Section 5 - Award 1 ======= -->
       <section id="portfolio-details-5" class="portfolio-details">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -295,7 +357,7 @@
 
       <!-- ======= Portfolio Details Section 6 - Award 2 ======= -->
       <section id="portfolio-details-6" class="portfolio-details section-bg">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -339,7 +401,7 @@
 
       <!-- ======= Portfolio Details Section 7 - Award 3 ======= -->
       <section id="portfolio-details-7" class="portfolio-details">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -385,7 +447,7 @@
 
       <!-- ======= Portfolio Details Section 8 - Project 1 ======= -->
       <section id="portfolio-details-8" class="portfolio-details section-bg">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -436,7 +498,7 @@
       
       <!-- ======= Portfolio Details Section 9 - Project 2 ======= -->
       <section id="portfolio-details-9" class="portfolio-details">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
@@ -499,7 +561,7 @@
 
       <!-- ======= Portfolio Details Section 10 - Project 3 ======= -->
       <section id="portfolio-details-10" class="portfolio-details section-bg">
-        <div class="container">
+        <div class="container text-dark-mode">
   
           <div class="row gy-4">
   
