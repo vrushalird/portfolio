@@ -972,14 +972,6 @@ section {
   margin-top: 130px;
 
 }
-/*
-#portfolioContainer section {
-  display: none;
-}
-
-#portfolioContainer section.active {
-  display: block;
-}*/
 
 .portfolio-details {
   padding-top: 150px !important;
@@ -1466,7 +1458,6 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   /*padding: 20px 0;*/
-  background: #FCEC60;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
   margin-top: 24px;
@@ -1503,6 +1494,48 @@ section {
   color: #0e2442;
   content: "/";
 }
+
+.breadcrumbs-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  color: #29C7DB;
+}
+
+.breadcrumbs-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #FCEC60;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+/* Hover over Breadcrumbs Title */
+.light-mode:hover, .breadcrumbs-title h2:hover {
+  color: #1f3333;
+}
+
+.light-mode h2:hover::after, .breadcrumbs-title h2:hover::after {
+  width: 80px; /* Change width on hover */
+  background-color: #FCEC60;
+}
+
+.dark-mode .breadcrumbs-title h2:hover {
+  color: #fff;
+}
+
+.dark-mode .breadcrumbs-title h2:hover::after {
+  width: 80px; /* Change width on hover */
+  background-color: #FCEC60;
+}
+
 
 @media (max-width: 768px) {
   .breadcrumbs .d-flex {
