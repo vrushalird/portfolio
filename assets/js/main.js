@@ -275,7 +275,9 @@
     ];
     var randomIndex = Math.floor(Math.random() * backgroundImages.length);
     var selectedImage = backgroundImages[randomIndex];
-    document.getElementById("hero").style.backgroundImage = "url('" + selectedImage + "')";
+    var heroElement = document.getElementById("hero");
+    if(heroElement != null)
+      heroElement.style.backgroundImage = "url('" + selectedImage + "')";
   }
 
   // Call changeBackgroundImage initially and then every 5 seconds
