@@ -444,6 +444,44 @@
     //displayToolTip();
   });
 
+  /**
+   * Fuction to download resume
+   */
+  /*function downloadFile(url, filename) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(xhr.response);
+            link.download = filename;
+
+            // Append the link to the document body
+            document.body.appendChild(link);
+
+            // Trigger the click event on the link
+            link.click();
+
+            // Remove the link from the document body
+            document.body.removeChild(link);
+        } else {
+            console.error('Failed to download file. Status code:', xhr.status);
+        }
+    };
+
+    xhr.send();
+}
+
+// Attach event listener to the button
+document.getElementById("btn").addEventListener("click", function () {
+    downloadFile('assets/resume/VrushaliDaware.pdf', 'VrushaliDaware.pdf');
+});
+*/
+
+
 
   /**
    * Porfolio isotope and filter

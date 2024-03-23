@@ -575,10 +575,6 @@ section {
   background: #f5fbfd;
 }
 
-.count-box {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .stats .count-box .card-top {
   /*background: #f5f8fd;*/
   height: 50%;
@@ -625,7 +621,7 @@ section {
   margin-top: 20px;
   color: #122f57;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
@@ -634,6 +630,10 @@ section {
 }
 
 /* Hover over CountBox */
+.count-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .light-mode:hover .purecounter, .count-box:hover .purecounter {
   transform: scale(1.5);
   padding-left: 0;
@@ -668,6 +668,10 @@ section {
 }
 
 /* Dark Mode Styles */
+.dark-mode .count-box {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
 .dark-mode .count-box:hover .purecounter {
   transform: scale(1.5);
   padding-left: 0;
@@ -676,7 +680,7 @@ section {
 }
 
 .dark-mode .count-box:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   transition: box-shadow 0.3s ease;
   background: linear-gradient(to right, #185B64, #0C1313) !important;
   color: white;
@@ -861,6 +865,27 @@ section {
   border: 2px solid #1f5297;
   background-color: #f5fbfd;
 }
+
+/*
+.resume-container .section-title {
+  padding-bottom: 0px;
+}
+
+.resume-container .download-btn {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: #FCEC60;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+}
+.resume-container .download-btn:hover {
+  background-color: #29C7DB;
+  color: #fff;
+}*/
 
 /*--------------------------------------------------------------
 # Portfolio
