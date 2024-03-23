@@ -1,16 +1,8 @@
 /**
-*  Main Stylesheet
-*  Author: Vrushali Daware
+*   Main Stylesheet
+*   Author: Vrushali Daware
 */
 
-/*-----------------------------------------------------
-General
-Color Codes:
-                       #149ddd
-Header                 #009aae
-Header (after hover)   #1f3333
-Text                   #272829
--------------------------------------------------------*/
 body {
   font-family: "Montserrat", sans-serif;
   color: #272829;
