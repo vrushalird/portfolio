@@ -9,3 +9,6 @@ Welcome to my professional portfolio! This portfolio is meticulously crafted usi
 * <b>Interactive Layout</b>: Leveraging JavaScript, the portfolio incorporates interactive elements to captivate visitors' attention and provide an immersive browsing experience.
 
 Thank you for visiting, and I invite you to explore further to learn more about me and my journey.
+
+<br>
+<a href="https://vrushalird.github.io/portfolio/"><img src="assets/img/portfolio/projects/Portfolio-Website.JPG"></a>
