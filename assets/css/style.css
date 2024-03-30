@@ -782,9 +782,10 @@ section {
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 20px 50px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  margin-left: 30px;
+  border-left: 4px solid #FCEC60;
   position: relative;
 }
 
@@ -826,7 +827,7 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #c3e8fa;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -844,19 +845,78 @@ section {
 .resume .resume-item:last-child {
   padding-bottom: 0;
 }
+/*
+.resume .resume-item .timeline {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  left: -32px;
+  top: 0;
+  background: #fff;
+  border: 4px solid #FCEC60;
+  background-color: #f5fbfd;
+}*/
 
+.resume .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #29C7DB;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #29C7DB;
+}
+
+.resume .icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+.resume .resume-item .timeline {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  left: -32px;
+  top: 0;
+  background: #fff;
+  border: 4px solid #FCEC60;
+  background-color: #f5fbfd;
+}
+
+/* Dark Mode Styles */
+.dark-mode .resume .resume-item .timeline {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  left: -32px;
+  top: 0;
+  background: #fff;
+  border: 4px solid #FCEC60;
+  background-color: #0C1313;
+}
+
+/*
 .resume .resume-item::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 60px;
+  height: 60px;
   border-radius: 50px;
-  left: -9px;
+  left: -32px;
   top: 0;
   background: #fff;
-  border: 2px solid #1f5297;
+  border: 4px solid #FCEC60;
   background-color: #f5fbfd;
-}
+}*/
 
 /*
 .resume-container .section-title {
