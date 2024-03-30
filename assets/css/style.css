@@ -212,8 +212,8 @@ h1 a:hover {
 
   .container,
   .container-fluid {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -375,7 +375,8 @@ h1 a:hover {
 }
 
 #hero .profile {
-  margin-right: 20px; /* Adjust spacing between the elements */
+  margin-right: 20px; 
+  margin-left: 50px;
   z-index: 2;
 }
 
@@ -408,7 +409,7 @@ h1 a:hover {
 #hero .hero-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
+  /*min-width: 300px;*/
   padding-right: 50px;
 }
 
@@ -442,14 +443,28 @@ h1 a:hover {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 36px;
+  }
+
+  #hero p {
+    font-size: 15px;
   }
 
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  #hero .hero-container .social-links {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  #hero .hero-container .social-links a {
+    font-size: 12px;
+    margin-bottom: 4px;
   }
 }
 
@@ -580,6 +595,7 @@ section {
 .stats .count-box {
   /*padding: 10px;*/
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .stats .count-box i {
@@ -770,6 +786,13 @@ section {
   transform: scale(1.5);
 }
 
+@media (max-width: 1199px) {
+  .skills .progress {
+    width: 100% !important;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -938,6 +961,18 @@ section {
   background-color: #29C7DB;
   color: #fff;
 }*/
+
+@media (max-width: 1199px) {
+  .img-fluid {
+    width: 300px;
+  }
+
+  .resume .resume-image-1, .resume .resume-image-2 {
+    width: 300px;
+    margin: 10px 10px 40px 10px;
+
+  }
+}
 
 /*--------------------------------------------------------------
 # Portfolio
