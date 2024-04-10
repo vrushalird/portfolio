@@ -299,7 +299,7 @@
     var workExperienceElements = document.querySelectorAll("#work_experience");  //to select all elements with given ID
     var experience = calculateWorkExperience();
     workExperienceElements.forEach(function(element) {
-        element.textContent = experience + " years";
+        element.textContent = experience;
     });
   }
   window.onload = displayWorkExperience;

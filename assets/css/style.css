@@ -642,7 +642,7 @@ section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.light-mode:hover .purecounter, .count-box:hover .purecounter {
+.light-mode:hover .purecounter, .count-box:hover .purecounter, .count-box:hover #work_experience {
   transform: scale(1.5);
   padding-left: 0;
   padding-top: 0;
@@ -660,7 +660,7 @@ section {
 
 .light-mode:hover, .count-box:hover,
 .light-mode:hover i, .count-box:hover i,
-.light-mode:hover .purecounter, .count-box:hover .purecounter {
+.light-mode:hover .purecounter, .count-box:hover .purecounter,  .count-box:hover #work_experience {
   color: white;
   transition: color 0.3s ease;
 }
@@ -680,7 +680,7 @@ section {
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
-.dark-mode .count-box:hover .purecounter {
+.dark-mode .count-box:hover .purecounter, .dark-mode .count-box:hover #work_experience {
   transform: scale(1.5);
   padding-left: 0;
   padding-top: 0;
@@ -696,7 +696,8 @@ section {
 }
 .dark-mode .count-box:hover,
 .dark-mode .count-box:hover i,
-.dark-mode .count-box:hover .purecounter {
+.dark-mode .count-box:hover .purecounter,
+.dark-mode .count-box:hover #work_experience {
   color: white;
   transition: color 0.3s ease;
 }
