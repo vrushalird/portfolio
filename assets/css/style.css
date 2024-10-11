@@ -512,7 +512,7 @@ section {
 
 /* Hover over Section Title */
 .light-mode:hover, .section-title h2:hover {
-  color: #1f3333;
+  color: #f5bc42;
 }
 
 .light-mode h2:hover::after, .section-title h2:hover::after {
@@ -1319,16 +1319,16 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact {
+/*.contact {
   padding-bottom: 130px;
-}
+}*/
 
 #contact {
   display: flex;
   background: url("../img/contact.jpg") top center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  /*height: 100vh;*/
   position: relative;
   background-size: cover;
   background-position: top center;
